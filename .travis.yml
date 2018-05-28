@@ -20,5 +20,6 @@ before_script:
 script:
   - composer validate --no-check-all --strict
   - composer phpcs
+  - vendor/bin/phpcpd
   - vendor/bin/phpunit
   - ./infection.phar --min-msi=48 --threads=4
