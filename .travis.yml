@@ -19,7 +19,7 @@ before_script:
 # Run here all same as in `composer ci`
 script:
   - composer validate --no-check-all --strict
-  - composer phpcs
-  - vendor/bin/phpcpd
+  - vendor/bin/phpcs --standard=PSR2 src
+  - vendor/bin/phpcpd src tests
   - vendor/bin/phpunit
   - ./infection.phar --min-msi=48 --threads=4
