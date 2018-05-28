@@ -17,6 +17,6 @@ before_script:
   - chmod +x infection.phar
 
 script:
-  - composer validate --strict
+  - composer ci
   - vendor/bin/phpunit
   - ./infection.phar --min-msi=48 --threads=4
