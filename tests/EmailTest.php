@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+use App\Email;
 use PHPUnit\Framework\TestCase;
 
 final class EmailTest extends TestCase
