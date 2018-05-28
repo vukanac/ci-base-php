@@ -2,9 +2,6 @@
     "name": "vukanac/ci-base-php",
     "description": "Example/Starting point for a project with CI for PHP with Travis",
     "type": "project",
-    "require-dev": {
-        "phpunit/phpunit": "^7.1"
-    },
     "license": "MIT",
     "authors": [
         {
@@ -12,5 +9,18 @@
             "email": "vukanac@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^7.1"
+    },
+    "scripts-descriptions": {
+        "test": "Launches the preconfigured PHPUnit"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    }
 }
