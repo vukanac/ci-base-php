@@ -51,6 +51,10 @@ The PHP Static Analysis tool.
 
     $ vendor/bin/phpstan analyse src tests
 
+Added strict rules with:
+
+* https://github.com/thecodingmachine/phpstan-strict-rules
+
 
 ### The best use
 

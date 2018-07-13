@@ -1,3 +1,5 @@
+# includes are used automaticaly by stan-extensions
+
 parameters:
     level: max
     paths:
