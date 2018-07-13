@@ -45,6 +45,13 @@ They will help you to write code with consistent style (quotation, indentation, 
 * phpcpd
 
 
+### PHPstan ##
+
+The PHP Static Analysis tool.
+
+    $ vendor/bin/phpstan analyse src tests
+
+
 ### The best use
 
 Install plugins to Sublime Text 3:

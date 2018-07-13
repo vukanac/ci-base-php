@@ -1,8 +1,11 @@
 <?php
 declare(strict_types=1);
 
+namespace Tests;
+
 use App\Email;
 use PHPUnit\Framework\TestCase;
+use InvalidArgumentException;
 
 final class EmailTest extends TestCase
 {

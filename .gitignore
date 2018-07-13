@@ -10,3 +10,4 @@ composer.phar
 /build/
 # Ignore local infection overrides.
 infection.json
+.phpunit.result.cache
