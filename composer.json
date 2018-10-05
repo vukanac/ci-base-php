@@ -39,8 +39,13 @@
         "phpcpd": "phpcpd src tests",
         "test": "phpunit"
     },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "config": {
         "process-timeout": 0,
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "7.1"
+        }
     }
 }
