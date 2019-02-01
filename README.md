@@ -1,6 +1,7 @@
 # Project: CI Base PHP with TravisCI
 
 [![Build Status](https://travis-ci.org/vukanac/ci-base-php.svg?branch=master)](https://travis-ci.org/vukanac/ci-base-php)
+[![codecov](https://codecov.io/gh/vukanac/ci-base-php/branch/master/graph/badge.svg)](https://codecov.io/gh/vukanac/ci-base-php)
 
 
 ## Description
