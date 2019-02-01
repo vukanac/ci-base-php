@@ -9,6 +9,7 @@
 
 Code is hosted on *GitHub* and tests are run on *TravisCI* on every push to `master` branch.
 
+The code coverage reports are uploaded to [codecov.io](https://codecov.io/gh/vukanac/ci-base-php).
 
 This is base set of tools that help writing PHP code.
 
