@@ -45,6 +45,11 @@ They will help you to write code with consistent style (quotation, indentation, 
 * phpcpd
 
 
+### SonarQube
+
+* Integrate GitHub, [Travis CI](https://docs.travis-ci.com/user/sonarcloud/) and [SonarQube](https://sonarcloud.io/dashboard?id=vukanac_ci-base-php)
+
+
 ### The best use
 
 Install plugins to Sublime Text 3:

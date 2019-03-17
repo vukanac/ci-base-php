@@ -1,29 +1,29 @@
 language: php
-
 php:
-  - 7.2
-  - nightly
-
+- 7.2
+- nightly
 cache:
   directories:
-    - $HOME/.composer/cache/files
-
+  - "$HOME/.composer/cache/files"
+addons:
+  sonarcloud:
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
+    token:
+      secure: GlfUoOki7gU2smB2FQCA+ts82rSe038UZ5eulNo/OSI4ek80RAO0N47ebEs3suKbKj8Rhr3QtV/+LgF115Ikwc/7JzdIOCkUZ8t3mUS0RxMitZddMeBjFg5GMmn+NXr3jGZMvTSJq+rLWWl8WH9PbjFUdcWQfXSl47C//KPmcKOHyb4fVmCSgyHCw48d5bnA/n99nixetLHBr+Zzj7/Qm2K9wine6o3MzTPgjC7SUSn0Ks/Oeaz7PGeSokpR/VHu0YgPAZIQr8DVBqpGxVe/bOltk/QVF2GfeAHmUfJLWbqZ2JOt9TOWYA08ZHwIadWld9fV/HVmZWx7P89eIjDdu7tfDX7miANsSVRl1vnXmnV+viB6hd05YI6n2t8lk+hI15nGqC7OZ9ZDgqKAlN3CgKwrkza0Y1eTxE8qS9PHqdpjtJ0rAdNg68TRvvqE3dhCFIxWXxu4BANjKKBpM2TlEYX1e65r71Lur5QsxkF8MO7HA7mmFF3qolnmwCkp7gJpoNHdzjFyQvYjmk+6ijRUL3WSXENojzYqyJXuqYOS0GLVX3obXmp4iIS8cvGFYEWpeL5KOEi8oPBcsaeIXT+1ConsRl1a6W8YkAeV+lz6H+R5TvEuTTe4djYy5VEeu9N0mgkFUQmMzVFRkzlhOxLQwUjylq+3pvVFmhSq8WaQG9I=
 install:
   - composer install --no-interaction --prefer-source
-
 before_script:
   - wget https://github.com/infection/infection/releases/download/0.8.0/infection.phar
   - wget https://github.com/infection/infection/releases/download/0.8.0/infection.phar.pubkey
   - chmod +x infection.phar
-
-# Run here all same as in `composer ci`
 script:
   - composer validate --no-check-all --strict
   - vendor/bin/phpcs --standard=PSR2 src
   - vendor/bin/phpcpd src tests
   - vendor/bin/phpunit --coverage-clover=coverage.xml
-  - ./infection.phar --min-msi=48 --threads=4
-
-# public repo on Travis CI (without token)
+  - "./infection.phar --min-msi=48 --threads=4"
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+script:
