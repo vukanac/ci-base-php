@@ -97,3 +97,5 @@ MIT
 
 
 Vladimir Vukanac
+    composer require --dev phan/phan
+    pecl install ast
