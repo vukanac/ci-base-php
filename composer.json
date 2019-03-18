@@ -12,6 +12,7 @@
     "require": {
     },
     "require-dev": {
+        "php-coveralls/php-coveralls": "^2.1",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.11.16",
         "phpstan/phpstan-phpunit": "^0.11.2",

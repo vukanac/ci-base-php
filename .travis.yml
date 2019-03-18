@@ -17,6 +17,7 @@ before_script:
 
 # Run here all same as in `composer ci`
 script:
+  - mkdir -p build/logs
   - composer validate --no-check-all --strict
   - vendor/bin/phpcs --standard=PSR2 src
   - vendor/bin/phpcpd src tests
@@ -29,3 +30,4 @@ script:
 # public repo on Travis CI (without token)
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - travis_retry php vendor/bin/php-coveralls
