@@ -18,7 +18,8 @@
         "phpunit/phpunit": "^8.4",
         "sebastian/phpcpd": "^4.1",
         "squizlabs/php_codesniffer": "^3.5",
-        "thecodingmachine/phpstan-strict-rules": "^0.11.2"
+        "thecodingmachine/phpstan-strict-rules": "^0.11.2",
+        "vimeo/psalm": "^3.6"
     },
     "autoload": {
         "psr-4": {
@@ -42,12 +43,14 @@
             "@phpcs",
             "@phpcpd",
             "@phpstan",
+            "@psalm",
             "@test"
         ],
         "phpcs": "phpcs --standard=PSR2 src",
         "phpcbf": "phpcbf --standard=PSR2 src tests",
         "phpcpd": "phpcpd src tests",
         "phpstan": "phpstan analyse --level=max src tests",
+        "psalm": "psalm --threads=4",
         "test": "phpunit"
     },
     "minimum-stability": "stable",

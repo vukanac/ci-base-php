@@ -7,6 +7,7 @@ use InvalidArgumentException;
 
 final class Email
 {
+    /** @var string $email **/
     private $email;
 
     private function __construct(string $email)
