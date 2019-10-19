@@ -1,15 +1,17 @@
 language: php
 
 php:
-  - 7.2
+  - 7.3
   - nightly
 
 cache:
   directories:
-    - $HOME/.composer/cache/files
+    - $HOME/.composer/cache
+    - $HOME/.cache/phan-ast/build
 
 install:
   - composer install --no-interaction --prefer-source
+  - pecl install ast
 
 before_script:
   - wget https://github.com/infection/infection/releases/download/0.8.0/infection.phar
@@ -19,6 +21,8 @@ before_script:
 # Run here all same as in `composer ci`
 script:
   - composer validate --no-check-all --strict
+  # Install phan separately because the tolerant-php-parser version may be behind.
+  - composer create-project phan/phan=1.2.6 ~/phan-install; ~/phan-install/phan
   - vendor/bin/phpcs --standard=PSR2 src
   - vendor/bin/phpcpd src tests
   - vendor/bin/phpunit --coverage-clover=coverage.xml
@@ -27,3 +31,7 @@ script:
 # public repo on Travis CI (without token)
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
+branches:
+  only:
+  - master
