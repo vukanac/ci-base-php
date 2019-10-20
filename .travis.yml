@@ -1,8 +1,7 @@
 language: php
 
 php:
-  - 7.2
-  - nightly
+  - 7.3
 
 cache:
   directories:
@@ -24,6 +23,7 @@ script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
   - vendor/bin/phpstan analyse src tests
   - ./infection.phar --min-msi=48 --threads=4
+  - composer outdated --direct
 
 # public repo on Travis CI (without token)
 after_success:
