@@ -23,6 +23,7 @@ script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
   - vendor/bin/phpstan analyse src tests
   - ./infection.phar --min-msi=48 --threads=4
+  - vendor/bin/psalm --threads=4
   - composer outdated --direct
 
 # public repo on Travis CI (without token)

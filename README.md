@@ -56,6 +56,13 @@ Added strict rules with:
 * https://github.com/thecodingmachine/phpstan-strict-rules
 
 
+#### PHP psalm
+
+    composer require --dev vimeo/psalm
+    ./vendor/bin/psalm --init
+    ./vendor/bin/psalm
+
+
 ### The best use
 
 Install plugins to Sublime Text 3:
