@@ -1,7 +1,8 @@
 # Project: CI Base PHP with TravisCI
 
 [![Build Status](https://travis-ci.org/vukanac/ci-base-php.svg?branch=master)](https://travis-ci.org/vukanac/ci-base-php)
-[![codecov](https://codecov.io/gh/vukanac/ci-base-php/branch/master/graph/badge.svg)](https://codecov.io/gh/vukanac/ci-base-php)
+[![Coverage Status - codecov](https://codecov.io/gh/vukanac/ci-base-php/branch/master/graph/badge.svg)](https://codecov.io/gh/vukanac/ci-base-php)
+[![Coverage Status - coveralls](https://coveralls.io/repos/github/vukanac/ci-base-php/badge.svg?branch=master)](https://coveralls.io/github/vukanac/ci-base-php?branch=master)
 
 
 ## Description
@@ -63,6 +64,13 @@ Added strict rules with:
     ./vendor/bin/psalm
 
 
+#### Ceveralls (with php)
+
+    composer require --dev php-coveralls/php-coveralls
+    pecl install xdebug
+    ./vendor/bin/phpunit
+
+
 ### The best use
 
 Install plugins to Sublime Text 3:
@@ -112,6 +120,5 @@ Watching for changes:
 MIT
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvukanac%2Fci-base-php.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvukanac%2Fci-base-php?ref=badge_large)
-
 
 Vladimir Vukanac
