@@ -9,10 +9,17 @@
             "email": "vukanac@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/vukanac/dephpend.git"
+        }
+    ],
     "require": {
     },
     "require-dev": {
         "php-coveralls/php-coveralls": "^2.1",
+        "dephpend/dephpend": "dev-upgraded-console",
         "phpstan/extension-installer": "^1.0",
         "phpstan/phpstan": "^0.11.16",
         "phpstan/phpstan-phpunit": "^0.11.2",
@@ -45,12 +52,16 @@
             "@phpcpd",
             "@phpstan",
             "@psalm",
-            "@test"
+            "@test",
+            "@dephpend",
+            "@dephpend-metric"
         ],
         "phpcs": "phpcs --standard=PSR2 src",
         "phpcbf": "phpcbf --standard=PSR2 src tests",
         "phpcpd": "phpcpd src tests",
         "phpstan": "phpstan analyse --level=max src tests",
+        "dephpend": "dephpend text src",
+        "dephpend-metric": "dephpend metric src",
         "psalm": "psalm --threads=4",
         "test": "phpunit"
     },

@@ -64,6 +64,14 @@ Added strict rules with:
     ./vendor/bin/psalm
 
 
+#### dePHPend
+
+    composer require  --dev dephpend/dephpend:dev-master
+    ./vendor/bin/dephpend --init
+    ./vendor/bin/dephpend
+    ./vendor/bin/dephpend metrics src
+
+
 #### Ceveralls (with php)
 
     composer require --dev php-coveralls/php-coveralls
