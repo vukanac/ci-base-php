@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/vukanac/ci-base-php.svg?branch=master)](https://travis-ci.org/vukanac/ci-base-php)
 [![Coverage Status - codecov](https://codecov.io/gh/vukanac/ci-base-php/branch/master/graph/badge.svg)](https://codecov.io/gh/vukanac/ci-base-php)
 [![Coverage Status - coveralls](https://coveralls.io/repos/github/vukanac/ci-base-php/badge.svg?branch=master)](https://coveralls.io/github/vukanac/ci-base-php?branch=master)
+[![Analysis - CodeFactor](https://www.codefactor.io/repository/github/vukanac/ci-base-php/badge/master)](https://www.codefactor.io/repository/github/vukanac/ci-base-php/overview/master)
 
 
 ## Description
