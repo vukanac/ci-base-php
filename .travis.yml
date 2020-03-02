@@ -25,6 +25,8 @@ script:
   - vendor/bin/phpstan analyse src tests
   - ./infection.phar --min-msi=48 --threads=4
   - vendor/bin/psalm --threads=4
+  - vendor/bin/dephpend text src
+  - vendor/bin/dephpend metrics src
   - composer outdated --direct
 
 # public repo on Travis CI (without token)
